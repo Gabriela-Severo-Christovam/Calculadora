@@ -1,20 +1,27 @@
 namespace Calculadora
 {
-    public partial class Form1 : Form
+    public partial class frmcalculadora : Form
     {
-        public Form1()
+        public frmcalculadora()
         {
             InitializeComponent();
         }
 
-        private void timer_pgb_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            pgbCarregando.Value = pgbCarregando.Value = 1;
+            
 
-            if (pgbCarregando.Value == 0)
+            if (pgbCarregando.Value >= 100)
             {
-                timer_pgb.Enabled = false;
+                tmr_pbg.Enabled = false;
+                jogo_calc Jogo_calculadora = new jogo_calc();
+                Jogo_calculadora.ShowDialog();
             }
+            else
+            {
+                pgbCarregando.Value = pgbCarregando.Value + 10;
+            }
+            
         }
     }
 }

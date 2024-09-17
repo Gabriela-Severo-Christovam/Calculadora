@@ -1,6 +1,6 @@
 ﻿namespace Calculadora
 {
-    partial class Form1
+    partial class frmcalculadora
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmcalculadora));
             pictureBox1 = new PictureBox();
             pgbCarregando = new ProgressBar();
             label1 = new Label();
-            timer_pgb = new System.Windows.Forms.Timer(components);
+            tmr_pbg = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -50,6 +50,7 @@
             // pgbCarregando
             // 
             pgbCarregando.Location = new Point(43, 358);
+            pgbCarregando.MarqueeAnimationSpeed = 3000;
             pgbCarregando.Name = "pgbCarregando";
             pgbCarregando.Size = new Size(714, 30);
             pgbCarregando.TabIndex = 1;
@@ -65,13 +66,12 @@
             label1.TabIndex = 2;
             label1.Text = "Aguarde...";
             // 
-            // timer_pgb
+            // tmr_pbg
             // 
-            timer_pgb.Enabled = true;
-            timer_pgb.Interval = 1000;
-            timer_pgb.Tick += timer_pgb_Tick;
+            tmr_pbg.Enabled = true;
+            tmr_pbg.Tick += timer1_Tick;
             // 
-            // Form1
+            // frmcalculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -80,7 +80,7 @@
             Controls.Add(pgbCarregando);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "frmcalculadora";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -94,5 +94,6 @@
         private ProgressBar pgbCarregando;
         private Label label1;
         private System.Windows.Forms.Timer timer_pgb;
+        private System.Windows.Forms.Timer tmr_pbg;
     }
 }
