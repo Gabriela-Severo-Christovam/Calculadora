@@ -28,32 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtVisor = new TextBox();
             mais = new Button();
             menos = new Button();
             vezes = new Button();
             divisao = new Button();
             apaga = new Button();
-            tres = new Button();
-            dois = new Button();
-            um = new Button();
+            btn3 = new Button();
+            btn2 = new Button();
+            btn1 = new Button();
             igual = new Button();
-            seis = new Button();
-            cinco = new Button();
-            quatro = new Button();
-            nove = new Button();
-            oito = new Button();
-            sete = new Button();
-            zero = new Button();
+            btn6 = new Button();
+            btn5 = new Button();
+            btn4 = new Button();
+            btn9 = new Button();
+            btn8 = new Button();
+            btn7 = new Button();
+            btn0 = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtVisor
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(275, 102);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(201, 23);
-            textBox1.TabIndex = 0;
+            txtVisor.Enabled = false;
+            txtVisor.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtVisor.Location = new Point(275, 86);
+            txtVisor.Name = "txtVisor";
+            txtVisor.Size = new Size(201, 39);
+            txtVisor.TabIndex = 0;
             // 
             // mais
             // 
@@ -66,6 +67,7 @@
             mais.Text = "+";
             mais.TextAlign = ContentAlignment.TopCenter;
             mais.UseVisualStyleBackColor = false;
+            mais.Click += mais_Click;
             // 
             // menos
             // 
@@ -78,6 +80,7 @@
             menos.Text = "-";
             menos.TextAlign = ContentAlignment.TopCenter;
             menos.UseVisualStyleBackColor = false;
+            menos.Click += menos_Click;
             // 
             // vezes
             // 
@@ -88,8 +91,9 @@
             vezes.Size = new Size(46, 45);
             vezes.TabIndex = 16;
             vezes.Text = "*";
-            vezes.TextAlign = ContentAlignment.TopCenter;
+            vezes.TextAlign = ContentAlignment.BottomCenter;
             vezes.UseVisualStyleBackColor = false;
+            vezes.Click += vezes_Click;
             // 
             // divisao
             // 
@@ -102,6 +106,7 @@
             divisao.Text = "/";
             divisao.TextAlign = ContentAlignment.TopCenter;
             divisao.UseVisualStyleBackColor = false;
+            divisao.Click += divisao_Click;
             // 
             // apaga
             // 
@@ -113,39 +118,43 @@
             apaga.TabIndex = 18;
             apaga.Text = "CLS";
             apaga.UseVisualStyleBackColor = false;
+            apaga.Click += apaga_Click;
             // 
-            // tres
+            // btn3
             // 
-            tres.BackColor = Color.LightCoral;
-            tres.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tres.Location = new Point(378, 181);
-            tres.Name = "tres";
-            tres.Size = new Size(46, 45);
-            tres.TabIndex = 19;
-            tres.Text = "3";
-            tres.UseVisualStyleBackColor = false;
+            btn3.BackColor = Color.LightCoral;
+            btn3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn3.Location = new Point(378, 181);
+            btn3.Name = "btn3";
+            btn3.Size = new Size(46, 45);
+            btn3.TabIndex = 19;
+            btn3.Text = "3";
+            btn3.UseVisualStyleBackColor = false;
+            btn3.Click += btn3_Click;
             // 
-            // dois
+            // btn2
             // 
-            dois.BackColor = Color.LightCoral;
-            dois.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dois.Location = new Point(327, 181);
-            dois.Name = "dois";
-            dois.Size = new Size(46, 45);
-            dois.TabIndex = 20;
-            dois.Text = "2";
-            dois.UseVisualStyleBackColor = false;
+            btn2.BackColor = Color.LightCoral;
+            btn2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn2.Location = new Point(327, 181);
+            btn2.Name = "btn2";
+            btn2.Size = new Size(46, 45);
+            btn2.TabIndex = 20;
+            btn2.Text = "2";
+            btn2.UseVisualStyleBackColor = false;
+            btn2.Click += btn2_Click;
             // 
-            // um
+            // btn1
             // 
-            um.BackColor = Color.LightCoral;
-            um.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            um.Location = new Point(275, 181);
-            um.Name = "um";
-            um.Size = new Size(46, 45);
-            um.TabIndex = 21;
-            um.Text = "1";
-            um.UseVisualStyleBackColor = false;
+            btn1.BackColor = Color.LightCoral;
+            btn1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn1.Location = new Point(275, 181);
+            btn1.Name = "btn1";
+            btn1.Size = new Size(46, 45);
+            btn1.TabIndex = 21;
+            btn1.Text = "1";
+            btn1.UseVisualStyleBackColor = false;
+            btn1.Click += btn1_Click;
             // 
             // igual
             // 
@@ -157,83 +166,91 @@
             igual.TabIndex = 22;
             igual.Text = "=";
             igual.UseVisualStyleBackColor = false;
+            igual.Click += igual_Click;
             // 
-            // seis
+            // btn6
             // 
-            seis.BackColor = Color.LightCoral;
-            seis.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            seis.Location = new Point(379, 231);
-            seis.Name = "seis";
-            seis.Size = new Size(46, 45);
-            seis.TabIndex = 23;
-            seis.Text = "6";
-            seis.UseVisualStyleBackColor = false;
+            btn6.BackColor = Color.LightCoral;
+            btn6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn6.Location = new Point(379, 231);
+            btn6.Name = "btn6";
+            btn6.Size = new Size(46, 45);
+            btn6.TabIndex = 23;
+            btn6.Text = "6";
+            btn6.UseVisualStyleBackColor = false;
+            btn6.Click += btn6_Click;
             // 
-            // cinco
+            // btn5
             // 
-            cinco.BackColor = Color.LightCoral;
-            cinco.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cinco.Location = new Point(327, 231);
-            cinco.Name = "cinco";
-            cinco.Size = new Size(46, 45);
-            cinco.TabIndex = 24;
-            cinco.Text = "5";
-            cinco.UseVisualStyleBackColor = false;
+            btn5.BackColor = Color.LightCoral;
+            btn5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn5.Location = new Point(327, 231);
+            btn5.Name = "btn5";
+            btn5.Size = new Size(46, 45);
+            btn5.TabIndex = 24;
+            btn5.Text = "5";
+            btn5.UseVisualStyleBackColor = false;
+            btn5.Click += btn5_Click;
             // 
-            // quatro
+            // btn4
             // 
-            quatro.BackColor = Color.LightCoral;
-            quatro.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            quatro.Location = new Point(275, 231);
-            quatro.Name = "quatro";
-            quatro.Size = new Size(46, 45);
-            quatro.TabIndex = 25;
-            quatro.Text = "4";
-            quatro.UseVisualStyleBackColor = false;
+            btn4.BackColor = Color.LightCoral;
+            btn4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn4.Location = new Point(275, 231);
+            btn4.Name = "btn4";
+            btn4.Size = new Size(46, 45);
+            btn4.TabIndex = 25;
+            btn4.Text = "4";
+            btn4.UseVisualStyleBackColor = false;
+            btn4.Click += btn4_Click;
             // 
-            // nove
+            // btn9
             // 
-            nove.BackColor = Color.LightCoral;
-            nove.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nove.Location = new Point(379, 282);
-            nove.Name = "nove";
-            nove.Size = new Size(46, 45);
-            nove.TabIndex = 26;
-            nove.Text = "9";
-            nove.UseVisualStyleBackColor = false;
+            btn9.BackColor = Color.LightCoral;
+            btn9.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn9.Location = new Point(379, 282);
+            btn9.Name = "btn9";
+            btn9.Size = new Size(46, 45);
+            btn9.TabIndex = 26;
+            btn9.Text = "9";
+            btn9.UseVisualStyleBackColor = false;
+            btn9.Click += btn9_Click;
             // 
-            // oito
+            // btn8
             // 
-            oito.BackColor = Color.LightCoral;
-            oito.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            oito.Location = new Point(327, 282);
-            oito.Name = "oito";
-            oito.Size = new Size(46, 45);
-            oito.TabIndex = 27;
-            oito.Text = "8";
-            oito.UseVisualStyleBackColor = false;
+            btn8.BackColor = Color.LightCoral;
+            btn8.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn8.Location = new Point(327, 282);
+            btn8.Name = "btn8";
+            btn8.Size = new Size(46, 45);
+            btn8.TabIndex = 27;
+            btn8.Text = "8";
+            btn8.UseVisualStyleBackColor = false;
+            btn8.Click += btn8_Click;
             // 
-            // sete
+            // btn7
             // 
-            sete.BackColor = Color.LightCoral;
-            sete.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sete.Location = new Point(275, 282);
-            sete.Name = "sete";
-            sete.Size = new Size(46, 45);
-            sete.TabIndex = 28;
-            sete.Text = "7";
-            sete.UseVisualStyleBackColor = false;
+            btn7.BackColor = Color.LightCoral;
+            btn7.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn7.Location = new Point(275, 282);
+            btn7.Name = "btn7";
+            btn7.Size = new Size(46, 45);
+            btn7.TabIndex = 28;
+            btn7.Text = "7";
+            btn7.UseVisualStyleBackColor = false;
+            btn7.Click += btn7_Click;
             // 
-            // zero
+            // btn0
             // 
-            zero.BackColor = Color.LightCoral;
-            zero.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            zero.Location = new Point(275, 333);
-            zero.Name = "zero";
-            zero.Size = new Size(150, 39);
-            zero.TabIndex = 29;
-            zero.Text = "0";
-            zero.UseVisualStyleBackColor = false;
+            btn0.BackColor = Color.LightCoral;
+            btn0.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn0.Location = new Point(275, 333);
+            btn0.Name = "btn0";
+            btn0.Size = new Size(150, 39);
+            btn0.TabIndex = 29;
+            btn0.Text = "0";
+            btn0.UseVisualStyleBackColor = false;
+            btn0.Click += btn0_Click;
             // 
             // jogo_calc
             // 
@@ -241,23 +258,23 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(800, 450);
-            Controls.Add(zero);
-            Controls.Add(sete);
-            Controls.Add(oito);
-            Controls.Add(nove);
-            Controls.Add(quatro);
-            Controls.Add(cinco);
-            Controls.Add(seis);
+            Controls.Add(btn0);
+            Controls.Add(btn7);
+            Controls.Add(btn8);
+            Controls.Add(btn9);
+            Controls.Add(btn4);
+            Controls.Add(btn5);
+            Controls.Add(btn6);
             Controls.Add(igual);
-            Controls.Add(um);
-            Controls.Add(dois);
-            Controls.Add(tres);
+            Controls.Add(btn1);
+            Controls.Add(btn2);
+            Controls.Add(btn3);
             Controls.Add(apaga);
             Controls.Add(divisao);
             Controls.Add(vezes);
             Controls.Add(menos);
             Controls.Add(mais);
-            Controls.Add(textBox1);
+            Controls.Add(txtVisor);
             Name = "jogo_calc";
             Text = "jogo_calc";
             ResumeLayout(false);
@@ -266,22 +283,22 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtVisor;
         private Button mais;
         private Button menos;
         private Button vezes;
         private Button divisao;
         private Button apaga;
-        private Button tres;
-        private Button dois;
-        private Button um;
+        private Button btn3;
+        private Button btn2;
+        private Button btn1;
         private Button igual;
-        private Button seis;
-        private Button cinco;
-        private Button quatro;
-        private Button nove;
-        private Button oito;
-        private Button sete;
-        private Button zero;
+        private Button btn6;
+        private Button btn5;
+        private Button btn4;
+        private Button btn9;
+        private Button btn8;
+        private Button btn7;
+        private Button btn0;
     }
 }
