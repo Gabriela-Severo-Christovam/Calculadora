@@ -9,7 +9,7 @@ namespace Calculadora
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
+
 
             if (pgbCarregando.Value >= 100)
             {
@@ -21,7 +21,7 @@ namespace Calculadora
             {
                 pgbCarregando.Value = pgbCarregando.Value + 10;
             }
-            
+
         }
     }
 }
