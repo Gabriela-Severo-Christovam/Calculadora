@@ -35,5 +35,11 @@ namespace Calculadora
         {
             Application.Exit();
         }
+
+        private void btn_limpar_Click(object sender, EventArgs e)
+        {
+            lbl_resposta.Text = "";
+            textBox_convert.Clear();
+        }
     }
 }

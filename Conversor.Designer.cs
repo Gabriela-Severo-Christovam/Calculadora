@@ -33,6 +33,7 @@
             label1 = new Label();
             textBox_convert = new TextBox();
             lbl_resposta = new Label();
+            btn_limpar = new Button();
             SuspendLayout();
             // 
             // converter
@@ -84,12 +85,23 @@
             lbl_resposta.TabIndex = 4;
             lbl_resposta.Text = "Resultado";
             // 
+            // btn_limpar
+            // 
+            btn_limpar.Location = new Point(306, 277);
+            btn_limpar.Name = "btn_limpar";
+            btn_limpar.Size = new Size(83, 39);
+            btn_limpar.TabIndex = 5;
+            btn_limpar.Text = "Limpar";
+            btn_limpar.UseVisualStyleBackColor = true;
+            btn_limpar.Click += btn_limpar_Click;
+            // 
             // Conversor
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(744, 439);
+            Controls.Add(btn_limpar);
             Controls.Add(lbl_resposta);
             Controls.Add(textBox_convert);
             Controls.Add(label1);
@@ -110,5 +122,6 @@
         private Label label1;
         private TextBox textBox_convert;
         private Label lbl_resposta;
+        private Button btn_limpar;
     }
 }
