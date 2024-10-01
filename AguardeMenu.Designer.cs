@@ -54,7 +54,6 @@
             pgbCarregando.Name = "pgbCarregando";
             pgbCarregando.Size = new Size(714, 30);
             pgbCarregando.TabIndex = 1;
-            pgbCarregando.Click += pgbCarregando_Click;
             // 
             // label1
             // 
@@ -85,6 +84,7 @@
             Name = "frmcalculadora";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Calculadora";
+            FormClosed += frmcalculadora_FormClosed;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

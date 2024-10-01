@@ -53,7 +53,7 @@
             apagar.Name = "apagar";
             apagar.Size = new Size(82, 37);
             apagar.TabIndex = 1;
-            apagar.Text = "Limpar";
+            apagar.Text = "Sair";
             apagar.UseVisualStyleBackColor = true;
             apagar.Click += apagar_Click;
             // 
@@ -98,6 +98,7 @@
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Name = "Conversor";
             Text = "Conversor";
+            FormClosed += Conversor_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

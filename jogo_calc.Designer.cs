@@ -306,6 +306,7 @@
             MainMenuStrip = menu_conversor;
             Name = "jogo_calc";
             Text = "jogo_calc";
+            FormClosed += jogo_calc_FormClosed;
             menu_conversor.ResumeLayout(false);
             menu_conversor.PerformLayout();
             ResumeLayout(false);

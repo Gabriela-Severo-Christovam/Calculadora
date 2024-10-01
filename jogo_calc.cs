@@ -136,5 +136,10 @@ namespace Calculadora
             Conversor jogo_conversor = new Conversor();
             jogo_conversor.ShowDialog();
         }
+
+        private void jogo_calc_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

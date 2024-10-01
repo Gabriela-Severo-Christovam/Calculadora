@@ -24,9 +24,9 @@ namespace Calculadora
 
         }
 
-        private void pgbCarregando_Click(object sender, EventArgs e)
+        private void frmcalculadora_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
