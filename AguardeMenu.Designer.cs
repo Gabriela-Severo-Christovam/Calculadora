@@ -54,6 +54,7 @@
             pgbCarregando.Name = "pgbCarregando";
             pgbCarregando.Size = new Size(714, 30);
             pgbCarregando.TabIndex = 1;
+            pgbCarregando.Click += pgbCarregando_Click;
             // 
             // label1
             // 

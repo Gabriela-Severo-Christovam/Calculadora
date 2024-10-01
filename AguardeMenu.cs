@@ -23,5 +23,10 @@ namespace Calculadora
             }
 
         }
+
+        private void pgbCarregando_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

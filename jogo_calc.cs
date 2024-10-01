@@ -130,5 +130,11 @@ namespace Calculadora
         {
             txtVisor.Clear();
         }
+
+        private void celsiusParaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Conversor jogo_conversor = new Conversor();
+            jogo_conversor.ShowDialog();
+        }
     }
 }

@@ -45,6 +45,10 @@
             btn8 = new Button();
             btn7 = new Button();
             btn0 = new Button();
+            menu_conversor = new MenuStrip();
+            conversorToolStripMenuItem = new ToolStripMenuItem();
+            celsiusParaToolStripMenuItem = new ToolStripMenuItem();
+            menu_conversor.SuspendLayout();
             SuspendLayout();
             // 
             // txtVisor
@@ -252,6 +256,29 @@
             btn0.UseVisualStyleBackColor = false;
             btn0.Click += btn0_Click;
             // 
+            // menu_conversor
+            // 
+            menu_conversor.Items.AddRange(new ToolStripItem[] { conversorToolStripMenuItem });
+            menu_conversor.Location = new Point(0, 0);
+            menu_conversor.Name = "menu_conversor";
+            menu_conversor.Size = new Size(800, 24);
+            menu_conversor.TabIndex = 30;
+            menu_conversor.Text = "menuStrip1";
+            // 
+            // conversorToolStripMenuItem
+            // 
+            conversorToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { celsiusParaToolStripMenuItem });
+            conversorToolStripMenuItem.Name = "conversorToolStripMenuItem";
+            conversorToolStripMenuItem.Size = new Size(73, 20);
+            conversorToolStripMenuItem.Text = "Conversor";
+            // 
+            // celsiusParaToolStripMenuItem
+            // 
+            celsiusParaToolStripMenuItem.Name = "celsiusParaToolStripMenuItem";
+            celsiusParaToolStripMenuItem.Size = new Size(194, 22);
+            celsiusParaToolStripMenuItem.Text = "Celsius para fahrenheit";
+            celsiusParaToolStripMenuItem.Click += celsiusParaToolStripMenuItem_Click;
+            // 
             // jogo_calc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -275,8 +302,12 @@
             Controls.Add(menos);
             Controls.Add(mais);
             Controls.Add(txtVisor);
+            Controls.Add(menu_conversor);
+            MainMenuStrip = menu_conversor;
             Name = "jogo_calc";
             Text = "jogo_calc";
+            menu_conversor.ResumeLayout(false);
+            menu_conversor.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -300,5 +331,8 @@
         private Button btn8;
         private Button btn7;
         private Button btn0;
+        private MenuStrip menu_conversor;
+        private ToolStripMenuItem conversorToolStripMenuItem;
+        private ToolStripMenuItem celsiusParaToolStripMenuItem;
     }
 }
